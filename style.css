@@ -1,24 +1,34 @@
+/* Reset and base styles */
 :root {
-    --primary-color: #1E88E5; /* Bright blue */
-    --secondary-color: #1565C0; /* Darker blue */
-    --accent-color: #FF4081; /* Pink */
-    --dark-color: #0D47A1; /* Deep blue */
-    --darker-color: #0A3880; /* Very deep blue */
-    --light-color: #F5F9FF; /* Very light blue */
-    --text-color: #2C3E50; /* Deep blue-gray for text */
-    --text-muted: #7F8C8D; /* Medium gray for muted text */
+    --primary-color: #1E88E5;
+    --secondary-color: #1565C0;
+    --accent-color: #FF4081;
+    --dark-color: #0D47A1;
+    --darker-color: #0A3880;
+    --light-color: #F5F9FF;
+    --text-color: #2C3E50;
+    --text-muted: #7F8C8D;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: var(--light-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    direction: ltr;
+    text-align: left;
 }
 
 .container {
@@ -28,126 +38,63 @@ body {
     padding: 0 15px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
-    text-align: center;
-}
-
-.primary-btn {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border-color: var(--primary-color);
-}
-
-.primary-btn:hover {
-    background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.secondary-btn {
-    background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.secondary-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border-color: var(--primary-color);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-    color: var(--text-color);
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-}
-
-/* Header */
+/* Header styles */
 header {
     background-color: var(--primary-color);
-    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
 }
 
 .logo h1 {
-    color: var(--light-color);
-    font-size: 1.8rem;
     margin: 0;
+    font-size: 1.8rem;
+    color: var(--light-color);
 }
 
 nav ul {
     display: flex;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
+    list-style: none;
+    justify-content: flex-end;
 }
 
 nav ul li a {
-    font-weight: 500;
-    padding: 8px 12px;
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     transition: var(--transition);
-    color: var(--light-color);
+    font-weight: 500;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: var(--accent-color);
+nav ul li a:hover,
+nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
 }
 
-/* Hero Section */
+/* Remove all translation controls */
+.translation-controls,
+.lang-toggle,
+.ai-toggle,
+[class*="translation"],
+[class*="lang-"],
+[class*="ai-"] {
+    display: none !important;
+}
+
+/* Hero section */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../images/hero-bg.jpg');
     background-size: cover;
@@ -179,6 +126,61 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 
 /* Countries Section */
@@ -1134,95 +1136,69 @@ footer {
     padding-right: 3rem;
 }
 
-.lang-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    padding: 10px 20px;
-    background-color: var(--accent-color);
-    color: var(--light-color);
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-family: 'Tajawal', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    transition: var(--transition);
-    box-shadow: var(--box-shadow);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.lang-toggle:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-.lang-toggle i {
-    font-size: 18px;
-}
-
-[dir="ltr"] .lang-toggle {
-    left: 20px;
-    right: auto;
-}
-
-[dir="rtl"] .lang-toggle {
-    right: 20px;
-    left: auto;
-}
-
-.translation-controls {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    gap: 10px;
-}
-
-.lang-toggle, .ai-toggle {
-    padding: 10px 20px;
-    background-color: var(--accent-color);
-    color: var(--light-color);
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-family: 'Tajawal', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    transition: var(--transition);
-    box-shadow: var(--box-shadow);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.lang-toggle:hover, .ai-toggle:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-.lang-toggle i, .ai-toggle i {
-    font-size: 18px;
-}
-
-[dir="ltr"] .translation-controls {
-    left: 20px;
-    right: auto;
-}
-
-[dir="rtl"] .translation-controls {
-    right: 20px;
-    left: auto;
-}
-
+.lang-toggle,
 .ai-toggle {
-    background-color: var(--primary-color);
+    display: none;
 }
 
-.ai-toggle:hover {
-    background-color: var(--accent-color);
+/* Remove translation controls */
+.translation-controls,
+.lang-toggle,
+.ai-toggle {
+    display: none !important;
+}
+
+/* Update RTL-specific styles to LTR */
+[dir="rtl"] .translation-controls,
+[dir="rtl"] .lang-toggle,
+[dir="rtl"] .ai-toggle {
+    display: none;
+}
+
+/* Update navigation styles for LTR */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+/* Remove translation controls styles */
+.translation-controls,
+.lang-toggle,
+.ai-toggle {
+    display: none;
+}
+
+/* Update RTL-specific styles to LTR */
+[dir="rtl"] .translation-controls,
+[dir="rtl"] .lang-toggle,
+[dir="rtl"] .ai-toggle {
+    display: none;
+}
+
+/* Update navigation styles for LTR */
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
 } 
