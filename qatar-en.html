@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar - Arab Countries Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js" defer></script>
+    <script src="js/ai-translator.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Arab Countries Archive</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="qatar-en.html" class="active">Qatar</a></li>
+                    <li><a href="jordan-en.html">Jordan</a></li>
+                    <li><a href="sudan-en.html">Sudan</a></li>
+                    <li><a href="palestine-en.html">Palestine</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="signin-en.html" id="authLink">Sign In</a></li>
+                    <li><a href="signup-en.html" id="signupLink">Sign Up</a></li>
+                    <li><a href="profile-en.html" id="profileLink" style="display: none;">Profile</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="translation-controls">
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span>عربي</span>
+        </button>
+        <button class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+
+    <section class="country-header" style="background-image: url('images/qatar-header.jpg');">
+        <div class="container">
+            <div class="country-header-content">
+                <h1>Qatar</h1>
+                <p>A modern Arab country that combines tradition with innovation</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="country-info">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2>About Qatar</h2>
+                    <p>Qatar is a modern Arab country located on the northeastern coast of the Arabian Peninsula. It is distinguished by its rapid development and its ability to balance between preserving its cultural heritage and embracing modernity.</p>
+                    <p>Qatar has become a global hub for business, tourism, and sports, hosting major international events such as the FIFA World Cup 2022. The country is known for its futuristic architecture, rich cultural heritage, and warm hospitality.</p>
+                </div>
+                <div class="country-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-city"></i>
+                        <div>
+                            <h3>Capital</h3>
+                            <p>Doha</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Population</h3>
+                            <p>Approximately 2.9 million</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <div>
+                            <h3>Area</h3>
+                            <p>11,586 km²</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h3>Official Language</h3>
+                            <p>Arabic</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-coins"></i>
+                        <div>
+                            <h3>Currency</h3>
+                            <p>Qatari Riyal</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-flag"></i>
+                        <div>
+                            <h3>National Day</h3>
+                            <p>December 18</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Economic Development</h3>
+                        <p>Rapid economic growth and diversification, establishing itself as a global financial center</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Sports</h3>
+                        <p>Hosting major international sporting events, including the FIFA World Cup 2022</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Education</h3>
+                        <p>Establishing world-class educational institutions and research centers</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Infrastructure</h3>
+                        <p>Developing modern infrastructure and smart city initiatives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places">
+        <div class="container">
+            <h2 class="section-title">Notable Landmarks</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/museum.jpg');"></div>
+                    <div class="place-content">
+                        <h3>National Museum of Qatar</h3>
+                        <p>A stunning architectural masterpiece showcasing Qatar's history and culture</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/souq.jpg');"></div>
+                    <div class="place-content">
+                        <h3>Souq Waqif</h3>
+                        <p>A traditional market offering authentic Qatari goods and cultural experiences</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/pearl.jpg');"></div>
+                    <div class="place-content">
+                        <h3>The Pearl-Qatar</h3>
+                        <p>An artificial island featuring luxury residences and Mediterranean-style architecture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Watch Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/qatar1.jpg" alt="Qatar">
+                    <div class="gallery-caption">Doha Skyline</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar2.jpg" alt="Qatar">
+                    <div class="gallery-caption">Desert Safari</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar3.jpg" alt="Qatar">
+                    <div class="gallery-caption">Traditional Architecture</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar4.jpg" alt="Qatar">
+                    <div class="gallery-caption">Modern City</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Arab Countries Archive</h3>
+                    <p>Comprehensive source of information about Arab countries</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index-en.html">Home</a></li>
+                        <li><a href="qatar-en.html">Qatar</a></li>
+                        <li><a href="jordan-en.html">Jordan</a></li>
+                        <li><a href="sudan-en.html">Sudan</a></li>
+                        <li><a href="palestine-en.html">Palestine</a></li>
+                        <li><a href="about-en.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@arabdigiarch.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4>Sources & References</h4>
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arab Countries Archive. All rights reserved to Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas.</p>
+                <p>Design and Development: Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 

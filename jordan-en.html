@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan - Arab Countries Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js" defer></script>
+    <script src="js/ai-translator.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Arab Countries Archive</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="qatar-en.html">Qatar</a></li>
+                    <li><a href="jordan-en.html" class="active">Jordan</a></li>
+                    <li><a href="sudan-en.html">Sudan</a></li>
+                    <li><a href="palestine-en.html">Palestine</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="signin-en.html" id="authLink">Sign In</a></li>
+                    <li><a href="signup-en.html" id="signupLink">Sign Up</a></li>
+                    <li><a href="profile-en.html" id="profileLink" style="display: none;">Profile</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="translation-controls">
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span>عربي</span>
+        </button>
+        <button class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+
+    <section class="country-header" style="background-image: url('images/jordan-header.jpg');">
+        <div class="container">
+            <div class="country-header-content">
+                <h1>Jordan</h1>
+                <p>Home to ancient civilizations and stunning natural landscapes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="country-info">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2>About Jordan</h2>
+                    <p>Jordan is an Arab country located in the heart of the Middle East, distinguished by its rich history and diverse geography. It is home to numerous archaeological sites and natural wonders.</p>
+                    <p>The country features diverse landscapes including the Dead Sea, Wadi Rum desert, and the ancient city of Petra. Jordan is known for its warm hospitality and has become a major tourist destination in the region.</p>
+                </div>
+                <div class="country-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-city"></i>
+                        <div>
+                            <h3>Capital</h3>
+                            <p>Amman</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Population</h3>
+                            <p>Approximately 11 million</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <div>
+                            <h3>Area</h3>
+                            <p>89,342 km²</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h3>Official Language</h3>
+                            <p>Arabic</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-coins"></i>
+                        <div>
+                            <h3>Currency</h3>
+                            <p>Jordanian Dinar</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-flag"></i>
+                        <div>
+                            <h3>National Day</h3>
+                            <p>May 25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Tourism</h3>
+                        <p>Development of world-class tourist destinations and preservation of archaeological sites</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Education</h3>
+                        <p>High literacy rates and quality education system</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Healthcare</h3>
+                        <p>Advanced healthcare system and medical tourism</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-content">
+                        <h3>Peace</h3>
+                        <p>Maintaining regional stability and promoting peace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places">
+        <div class="container">
+            <h2 class="section-title">Notable Landmarks</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/petra.jpg');"></div>
+                    <div class="place-content">
+                        <h3>Petra</h3>
+                        <p>Ancient city carved into rock, featuring the iconic Treasury and numerous archaeological wonders</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/dead-sea.jpg');"></div>
+                    <div class="place-content">
+                        <h3>Dead Sea</h3>
+                        <p>The lowest point on Earth, known for its therapeutic properties and unique floating experience</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image" style="background-image: url('images/wadi-rum.jpg');"></div>
+                    <div class="place-content">
+                        <h3>Wadi Rum</h3>
+                        <p>Stunning desert landscape featuring red sand dunes and dramatic rock formations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Watch Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/jordan1.jpg" alt="Jordan">
+                    <div class="gallery-caption">Petra Treasury</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan2.jpg" alt="Jordan">
+                    <div class="gallery-caption">Dead Sea</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan3.jpg" alt="Jordan">
+                    <div class="gallery-caption">Wadi Rum</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan4.jpg" alt="Jordan">
+                    <div class="gallery-caption">Amman Citadel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Arab Countries Archive</h3>
+                    <p>Comprehensive source of information about Arab countries</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index-en.html">Home</a></li>
+                        <li><a href="qatar-en.html">Qatar</a></li>
+                        <li><a href="jordan-en.html">Jordan</a></li>
+                        <li><a href="sudan-en.html">Sudan</a></li>
+                        <li><a href="palestine-en.html">Palestine</a></li>
+                        <li><a href="about-en.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@arabdigiarch.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4>Sources & References</h4>
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arab Countries Archive. All rights reserved to Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas.</p>
+                <p>Design and Development: Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 

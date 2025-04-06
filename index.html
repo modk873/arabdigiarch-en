@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arab Countries Archive - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js" defer></script>
+    <script src="js/ai-translator.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Arab Countries Archive</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-en.html" class="active">Home</a></li>
+                    <li><a href="qatar-en.html">Qatar</a></li>
+                    <li><a href="jordan-en.html">Jordan</a></li>
+                    <li><a href="sudan-en.html">Sudan</a></li>
+                    <li><a href="palestine-en.html">Palestine</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="signin-en.html" id="authLink">Sign In</a></li>
+                    <li><a href="signup-en.html" id="signupLink">Sign Up</a></li>
+                    <li><a href="profile-en.html" id="profileLink" style="display: none;">Profile</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="translation-controls">
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span>عربي</span>
+        </button>
+        <button class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Arab Countries Archive</h2>
+                <p>Your comprehensive guide to exploring the rich heritage and culture of Arab countries</p>
+                <div class="hero-buttons">
+                    <a href="#countries" class="btn primary-btn">Explore Countries</a>
+                    <a href="about-en.html" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Comprehensive Information</h3>
+                    <p>Detailed information about history, culture, and landmarks of Arab countries</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-images"></i>
+                    <h3>Rich Media Content</h3>
+                    <p>High-quality images and videos showcasing the beauty of Arab countries</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Multilingual Support</h3>
+                    <p>Content available in both Arabic and English languages</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Maps</h3>
+                    <p>Interactive maps to explore geographical features and important locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countries" id="countries">
+        <div class="container">
+            <h2 class="section-title">Explore Countries</h2>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="country-image" style="background-image: url('images/qatar-header.jpg');"></div>
+                    <div class="country-content">
+                        <h3>Qatar</h3>
+                        <p>A modern Arab country that combines tradition with innovation</p>
+                        <a href="qatar-en.html" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-image" style="background-image: url('images/jordan-header.jpg');"></div>
+                    <div class="country-content">
+                        <h3>Jordan</h3>
+                        <p>Home to ancient civilizations and stunning natural landscapes</p>
+                        <a href="jordan-en.html" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-image" style="background-image: url('images/sudan-header.jpg');"></div>
+                    <div class="country-content">
+                        <h3>Sudan</h3>
+                        <p>Land of ancient pyramids and rich cultural heritage</p>
+                        <a href="sudan-en.html" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <div class="country-image" style="background-image: url('images/palestine-header.jpg');"></div>
+                    <div class="country-content">
+                        <h3>Palestine</h3>
+                        <p>Home of ancient civilizations and meeting point of religions</p>
+                        <a href="palestine-en.html" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="goals">
+        <div class="container">
+            <h2 class="section-title">Our Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Cultural Exchange</h3>
+                    <p>Promoting cultural exchange and understanding between Arab countries and the world</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>Providing educational resources about Arab history and culture</p>
+                </div>
+                <div class="goal-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Unity</h3>
+                    <p>Strengthening the bonds between Arab countries through shared knowledge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Arab Countries Archive</h3>
+                    <p>Comprehensive source of information about Arab countries</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index-en.html">Home</a></li>
+                        <li><a href="qatar-en.html">Qatar</a></li>
+                        <li><a href="jordan-en.html">Jordan</a></li>
+                        <li><a href="sudan-en.html">Sudan</a></li>
+                        <li><a href="palestine-en.html">Palestine</a></li>
+                        <li><a href="about-en.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@arabdigiarch.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4>Sources & References</h4>
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arab Countries Archive. All rights reserved to Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas.</p>
+                <p>Design and Development: Mohammed and Mohammed Al-Amri, Al-Hajri, Al-Jalham, and Anas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 
