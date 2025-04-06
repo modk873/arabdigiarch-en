@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار الصور - أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #10b981;
+            --secondary-color: #3b82f6;
+            --dark-color: #1f2937;
+            --light-color: #f9fafb;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+        
+        .search-container {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 16px;
+            font-family: 'Tajawal', Arial, sans-serif;
+        }
+        
+        .search-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            font-family: 'Tajawal', Arial, sans-serif;
+            font-size: 16px;
+        }
+        
+        .search-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', Arial, sans-serif;
+            transition: var(--transition);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .image-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-info {
+            padding: 15px;
+        }
+        
+        .image-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .select-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', Arial, sans-serif;
+            transition: var(--transition);
+        }
+        
+        .select-btn:hover {
+            background-color: #0da271;
+        }
+        
+        .preview-btn {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Tajawal', Arial, sans-serif;
+            transition: var(--transition);
+        }
+        
+        .preview-btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .selected-images {
+            margin-top: 50px;
+        }
+        
+        .selected-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .selected-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .selected-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .selected-info {
+            padding: 10px;
+        }
+        
+        .selected-info select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-family: 'Tajawal', Arial, sans-serif;
+        }
+        
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .save-all-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Tajawal', Arial, sans-serif;
+            transition: var(--transition);
+        }
+        
+        .save-all-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 30px;
+            font-size: 18px;
+        }
+        
+        .loading i {
+            margin-left: 10px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>اختيار الصور لموقع أرشيف الدول العربية</h1>
+            <p>ابحث عن صور عالية الجودة واختر ما يناسب موقعك</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-input" id="search-input" placeholder="ابحث عن صور (مثال: قطر، الأردن، القدس، الأهرامات)">
+            <button class="search-btn" id="search-btn">بحث</button>
+        </div>
+        
+        <div class="categories">
+            <button class="category-btn active" data-query="qatar doha">قطر</button>
+            <button class="category-btn" data-query="jordan petra amman">الأردن</button>
+            <button class="category-btn" data-query="sudan pyramids khartoum">السودان</button>
+            <button class="category-btn" data-query="palestine jerusalem">فلسطين</button>
+            <button class="category-btn" data-query="arabic architecture">عمارة عربية</button>
+            <button class="category-btn" data-query="middle east landscape">مناظر طبيعية</button>
+        </div>
+        
+        <div id="results">
+            <div class="loading">
+                <span>جاري تحميل الصور</span>
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="image-grid" id="image-grid"></div>
+        </div>
+        
+        <div class="selected-images">
+            <h2>الصور المختارة</h2>
+            <p>اختر الصور التي تريد استخدامها في موقعك وحدد موقع كل صورة</p>
+            
+            <div class="selected-grid" id="selected-grid"></div>
+            
+            <button class="save-all-btn" id="save-btn">حفظ جميع الصور المختارة</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="preview-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <img src="" alt="معاينة الصورة" class="modal-image" id="modal-image">
+        </div>
+    </div>
+    
+    <script>
+        // Image locations in the website
+        const imageLocations = [
+            // Main page images
+            "hero-bg.jpg",
+            "about-image.jpg",
+            
+            // Country card images
+            "qatar.jpg",
+            "jordan.jpg",
+            "sudan.jpg",
+            "palestine.jpg",
+            
+            // Qatar gallery images
+            "qatar-header.jpg",
+            "qatar-museum.jpg",
+            "qatar-souq.jpg",
+            "qatar-pearl.jpg",
+            "qatar-gallery-1.jpg",
+            "qatar-gallery-2.jpg",
+            "qatar-gallery-3.jpg",
+            "qatar-gallery-4.jpg",
+            "qatar-gallery-5.jpg",
+            "qatar-gallery-6.jpg",
+            "qatar-gallery-7.jpg",
+            "qatar-gallery-8.jpg",
+            
+            // Jordan gallery images
+            "jordan-header.jpg",
+            "jordan-petra.jpg",
+            "jordan-dead-sea.jpg",
+            "jordan-amman.jpg",
+            "jordan-gallery-1.jpg",
+            "jordan-gallery-2.jpg",
+            "jordan-gallery-3.jpg",
+            "jordan-gallery-4.jpg",
+            "jordan-gallery-5.jpg",
+            "jordan-gallery-6.jpg",
+            "jordan-gallery-7.jpg",
+            "jordan-gallery-8.jpg",
+            
+            // Sudan gallery images
+            "sudan-header.jpg",
+            "sudan-pyramids.jpg",
+            "sudan-nile.jpg",
+            "sudan-khartoum.jpg",
+            "sudan-gallery-1.jpg",
+            "sudan-gallery-2.jpg",
+            "sudan-gallery-3.jpg",
+            "sudan-gallery-4.jpg",
+            "sudan-gallery-5.jpg",
+            "sudan-gallery-6.jpg",
+            "sudan-gallery-7.jpg",
+            "sudan-gallery-8.jpg",
+            
+            // Palestine gallery images
+            "palestine-header.jpg",
+            "palestine-jerusalem.jpg",
+            "palestine-bethlehem.jpg",
+            "palestine-gaza.jpg",
+            "palestine-gallery-1.jpg",
+            "palestine-gallery-2.jpg",
+            "palestine-gallery-3.jpg",
+            "palestine-gallery-4.jpg",
+            "palestine-gallery-5.jpg",
+            "palestine-gallery-6.jpg",
+            "palestine-gallery-7.jpg",
+            "palestine-gallery-8.jpg"
+        ];
+        
+        // Selected images
+        const selectedImages = {};
+        
+        // DOM elements
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const imageGrid = document.getElementById('image-grid');
+        const selectedGrid = document.getElementById('selected-grid');
+        const saveBtn = document.getElementById('save-btn');
+        const loadingElement = document.querySelector('.loading');
+        const previewModal = document.getElementById('preview-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+        
+        // Hide loading initially
+        loadingElement.style.display = 'none';
+        
+        // Event listeners
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                searchInput.value = this.dataset.query;
+                performSearch();
+            });
+        });
+        
+        saveBtn.addEventListener('click', saveSelectedImages);
+        
+        closeModal.addEventListener('click', function() {
+            previewModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === previewModal) {
+                previewModal.style.display = 'none';
+            }
+        });
+        
+        // Perform initial search
+        performSearch();
+        
+        // Functions
+        function performSearch() {
+            const query = searchInput.value.trim() || 'qatar doha';
+            
+            // Show loading
+            imageGrid.innerHTML = '';
+            loadingElement.style.display = 'block';
+            
+            // Simulate API call (replace with actual Unsplash API call in production)
+            setTimeout(() => {
+                // In a real implementation, you would call the Unsplash API here
+                // For this demo, we'll use placeholder images
+                const results = generateMockResults(query);
+                displayResults(results);
+                
+                // Hide loading
+                loadingElement.style.display = 'none';
+            }, 1000);
+        }
+        
+        function generateMockResults(query) {
+            // This is a mock function - in a real implementation, you would call the Unsplash API
+            const results = [];
+            const keywords = query.toLowerCase().split(' ');
+            
+            // Generate 20 mock results
+            for (let i = 1; i <= 20; i++) {
+                const width = 800;
+                const height = 600;
+                const id = `mock-${query.replace(/\s+/g, '-')}-${i}`;
+                
+                // Use different image services for variety
+                let imageUrl;
+                if (i % 4 === 0) {
+                    imageUrl = `https://source.unsplash.com/random/800x600?${query}`;
+                } else if (i % 4 === 1) {
+                    imageUrl = `https://picsum.photos/seed/${id}/${width}/${height}`;
+                } else if (i % 4 === 2) {
+                    imageUrl = `https://loremflickr.com/${width}/${height}/${keywords[0]}`;
+                } else {
+                    imageUrl = `https://placeimg.com/${width}/${height}/nature`;
+                }
+                
+                results.push({
+                    id: id,
+                    urls: {
+                        regular: imageUrl,
+                        full: imageUrl
+                    },
+                    alt_description: `${query} image ${i}`,
+                    user: {
+                        name: 'Photographer ' + i,
+                        links: {
+                            html: '#'
+                        }
+                    }
+                });
+            }
+            
+            return results;
+        }
+        
+        function displayResults(results) {
+            imageGrid.innerHTML = '';
+            
+            results.forEach(image => {
+                const card = document.createElement('div');
+                card.className = 'image-card';
+                
+                const img = document.createElement('img');
+                img.src = image.urls.regular;
+                img.alt = image.alt_description || 'صورة';
+                img.loading = 'lazy';
+                
+                const info = document.createElement('div');
+                info.className = 'image-info';
+                
+                const photographer = document.createElement('p');
+                photographer.textContent = `المصور: ${image.user.name}`;
+                
+                const actions = document.createElement('div');
+                actions.className = 'image-actions';
+                
+                const selectBtn = document.createElement('button');
+                selectBtn.className = 'select-btn';
+                selectBtn.textContent = 'اختيار';
+                selectBtn.addEventListener('click', () => selectImage(image));
+                
+                const previewBtn = document.createElement('button');
+                previewBtn.className = 'preview-btn';
+                previewBtn.textContent = 'معاينة';
+                previewBtn.addEventListener('click', () => previewImage(image));
+                
+                actions.appendChild(selectBtn);
+                actions.appendChild(previewBtn);
+                
+                info.appendChild(photographer);
+                info.appendChild(actions);
+                
+                card.appendChild(img);
+                card.appendChild(info);
+                
+                imageGrid.appendChild(card);
+            });
+        }
+        
+        function selectImage(image) {
+            // Add to selected images
+            const id = Date.now().toString(); // Generate unique ID
+            selectedImages[id] = {
+                id: id,
+                image: image,
+                location: ''
+            };
+            
+            // Update selected grid
+            updateSelectedGrid();
+        }
+        
+        function updateSelectedGrid() {
+            selectedGrid.innerHTML = '';
+            
+            Object.values(selectedImages).forEach(item => {
+                const selectedItem = document.createElement('div');
+                selectedItem.className = 'selected-item';
+                
+                const img = document.createElement('img');
+                img.src = item.image.urls.regular;
+                img.alt = item.image.alt_description || 'صورة مختارة';
+                
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-btn';
+                removeBtn.innerHTML = '&times;';
+                removeBtn.addEventListener('click', () => {
+                    delete selectedImages[item.id];
+                    updateSelectedGrid();
+                });
+                
+                const info = document.createElement('div');
+                info.className = 'selected-info';
+                
+                const select = document.createElement('select');
+                select.addEventListener('change', (e) => {
+                    item.location = e.target.value;
+                });
+                
+                // Add empty option
+                const emptyOption = document.createElement('option');
+                emptyOption.value = '';
+                emptyOption.textContent = 'اختر موقع الصورة';
+                select.appendChild(emptyOption);
+                
+                // Add options for all image locations
+                imageLocations.forEach(location => {
+                    const option = document.createElement('option');
+                    option.value = location;
+                    option.textContent = location;
+                    if (item.location === location) {
+                        option.selected = true;
+                    }
+                    select.appendChild(option);
+                });
+                
+                info.appendChild(select);
+                
+                selectedItem.appendChild(img);
+                selectedItem.appendChild(removeBtn);
+                selectedItem.appendChild(info);
+                
+                selectedGrid.appendChild(selectedItem);
+            });
+        }
+        
+        function previewImage(image) {
+            modalImage.src = image.urls.full || image.urls.regular;
+            previewModal.style.display = 'flex';
+        }
+        
+        function saveSelectedImages() {
+            // Check if all selected images have locations
+            const unassigned = Object.values(selectedImages).filter(item => !item.location);
+            
+            if (unassigned.length > 0) {
+                alert(`يرجى اختيار موقع لجميع الصور المختارة. هناك ${unassigned.length} صورة بدون موقع.`);
+                return;
+            }
+            
+            // Create object to update download-images.js
+            const imageLinks = {};
+            
+            Object.values(selectedImages).forEach(item => {
+                imageLinks[item.location] = item.image.urls.full || item.image.urls.regular;
+            });
+            
+            // In a real implementation, you would update the download-images.js file
+            // For this demo, we'll just show the result
+            const result = JSON.stringify(imageLinks, null, 2);
+            
+            // Create a modal to show the result
+            const resultModal = document.createElement('div');
+            resultModal.style.position = 'fixed';
+            resultModal.style.top = '0';
+            resultModal.style.left = '0';
+            resultModal.style.width = '100%';
+            resultModal.style.height = '100%';
+            resultModal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            resultModal.style.zIndex = '2000';
+            resultModal.style.display = 'flex';
+            resultModal.style.justifyContent = 'center';
+            resultModal.style.alignItems = 'center';
+            
+            const resultContent = document.createElement('div');
+            resultContent.style.backgroundColor = 'white';
+            resultContent.style.padding = '20px';
+            resultContent.style.borderRadius = '8px';
+            resultContent.style.maxWidth = '90%';
+            resultContent.style.maxHeight = '90%';
+            resultContent.style.overflow = 'auto';
+            resultContent.style.position = 'relative';
+            
+            const closeResult = document.createElement('span');
+            closeResult.textContent = '×';
+            closeResult.style.position = 'absolute';
+            closeResult.style.top = '10px';
+            closeResult.style.right = '10px';
+            closeResult.style.fontSize = '24px';
+            closeResult.style.cursor = 'pointer';
+            closeResult.addEventListener('click', () => {
+                document.body.removeChild(resultModal);
+            });
+            
+            const title = document.createElement('h2');
+            title.textContent = 'تم اختيار الصور بنجاح';
+            title.style.marginBottom = '20px';
+            
+            const instructions = document.createElement('p');
+            instructions.textContent = 'قم بنسخ الكود التالي واستبدال محتوى ملف download-images.js به:';
+            instructions.style.marginBottom = '10px';
+            
+            const code = document.createElement('pre');
+            code.style.backgroundColor = '#f5f5f5';
+            code.style.padding = '15px';
+            code.style.borderRadius = '4px';
+            code.style.overflow = 'auto';
+            code.style.maxHeight = '400px';
+            code.textContent = `// Image sources and recommended filenames
+const imageLinks = ${result};
+
+// ... existing code ...`;
+            
+            const downloadBtn = document.createElement('button');
+            downloadBtn.textContent = 'تنزيل الصور المختارة';
+            downloadBtn.style.backgroundColor = '#3b82f6';
+            downloadBtn.style.color = 'white';
+            downloadBtn.style.border = 'none';
+            downloadBtn.style.padding = '12px 25px';
+            downloadBtn.style.borderRadius = '8px';
+            downloadBtn.style.fontSize = '16px';
+            downloadBtn.style.cursor = 'pointer';
+            downloadBtn.style.marginTop = '20px';
+            downloadBtn.style.fontFamily = "'Tajawal', Arial, sans-serif";
+            downloadBtn.addEventListener('click', () => {
+                alert('في التطبيق الحقيقي، سيتم تنزيل الصور هنا. لهذا العرض التوضيحي، يرجى نسخ الكود واستبداله في ملف download-images.js ثم تشغيل سكريبت التنزيل.');
+            });
+            
+            resultContent.appendChild(closeResult);
+            resultContent.appendChild(title);
+            resultContent.appendChild(instructions);
+            resultContent.appendChild(code);
+            resultContent.appendChild(downloadBtn);
+            
+            resultModal.appendChild(resultContent);
+            document.body.appendChild(resultModal);
+        }
+    </script>
+</body>
+</html> 

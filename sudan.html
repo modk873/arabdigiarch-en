@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="sudanTitle">السودان - أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js" defer></script>
+    <script src="js/ai-translator.js" defer></script>
+</head>
+<body>
+    <!-- Translation Controls -->
+    <div class="translation-controls">
+        <button onclick="toggleLanguage()" class="translate-btn">
+            <i class="fas fa-language"></i>
+            <span data-translate="toggleLanguage">تغيير اللغة</span>
+        </button>
+        <button onclick="toggleAITranslation()" class="ai-translate-btn">
+            <i class="fas fa-robot"></i>
+            <span data-translate="toggleAI">تفعيل/تعطيل الترجمة الآلية</span>
+        </button>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1 data-translate="arabicArchive">أرشيف الدول العربية</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" class="active" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink" data-translate="signin">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink" data-translate="signup">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;" data-translate="profile">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn" data-translate="logout">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="country-header" style="background-image: url('images/sudan-header.jpg');">
+        <div class="country-header-content">
+            <h1 data-translate="sudanTitle">جمهورية السودان</h1>
+            <p data-translate="sudanDescription">دولة عربية أفريقية تقع في شمال شرق أفريقيا</p>
+        </div>
+    </section>
+
+    <section class="country-info" id="about-sudan">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2 data-translate="aboutSudan">نبذة عن السودان</h2>
+                    <p data-translate="sudanIntro">جمهورية السودان هي دولة عربية أفريقية تقع في شمال شرق أفريقيا. عاصمتها الخرطوم، وتحدها مصر من الشمال، وليبيا من الشمال الغربي، وتشاد من الغرب، وجمهورية أفريقيا الوسطى من الجنوب الغربي، وجنوب السودان من الجنوب، وإثيوبيا من الجنوب الشرقي، وإريتريا من الشرق، والبحر الأحمر من الشمال الشرقي.</p>
+                    <p data-translate="sudanGeography">يعتبر السودان من أكبر الدول الأفريقية والعربية من حيث المساحة، ويتميز بتنوع جغرافي كبير يشمل الصحاري والسهول والجبال والأنهار. كما يتميز بتنوع ثقافي وعرقي ولغوي كبير، حيث يضم العديد من القبائل والمجموعات العرقية المختلفة.</p>
+                    <p data-translate="sudanHistory">يمتلك السودان تاريخاً عريقاً يمتد إلى الحضارات القديمة مثل مملكة كوش والممالك النوبية. وقد شهد السودان تحولات سياسية واقتصادية واجتماعية كبيرة على مر العصور، وخاصة بعد استقلاله عن الحكم الثنائي البريطاني المصري عام 1956.</p>
+                </div>
+                <div class="country-stats">
+                    <h3 data-translate="basicInfo">معلومات أساسية</h3>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong data-translate="capital">العاصمة:</strong> <span data-translate="khartoum">الخرطوم</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong data-translate="population">عدد السكان:</strong> <span data-translate="sudanPopulation">حوالي 45 مليون نسمة (2023)</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong data-translate="area">المساحة:</strong> <span data-translate="sudanArea">1,886,068 كم²</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <strong data-translate="officialLanguage">اللغة الرسمية:</strong> <span data-translate="sudanLanguages">العربية والإنجليزية</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <strong data-translate="currency">العملة:</strong> <span data-translate="sudanCurrency">الجنيه السوداني</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong data-translate="nationalDay">اليوم الوطني:</strong> <span data-translate="sudanNationalDay">1 يناير (عيد الاستقلال)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements-sudan">
+        <div class="container">
+            <h2 class="section-title" data-translate="sudanAchievements">أبرز إنجازات السودان</h2>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="agricultureAchievement">تطوير قطاع الزراعة</h3>
+                    <p data-translate="agricultureAchievementDesc">يعتبر السودان من الدول ذات الإمكانيات الزراعية الهائلة، حيث يمتلك أراضي خصبة وموارد مائية وفيرة. وقد نجح في تطوير مشاريع زراعية كبرى مثل مشروع الجزيرة الذي يعد من أكبر المشاريع الزراعية المروية في أفريقيا والعالم العربي. كما يشتهر السودان بإنتاج القطن والذرة والسمسم والفول السوداني والصمغ العربي الذي يعد من أهم صادراته.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="culturalHeritageAchievement">الحفاظ على التراث الثقافي</h3>
+                    <p data-translate="culturalHeritageAchievementDesc">نجح السودان في الحفاظ على تراثه الثقافي المتنوع والغني، والذي يعكس تنوع المجتمع السوداني وتعدد ثقافاته. وقد تم تسجيل العديد من المواقع الأثرية السودانية ضمن قائمة التراث العالمي لليونسكو، مثل جبل البركل والمواقع الأثرية في جزيرة مروي. كما يشتهر السودان بفنونه الشعبية المتنوعة من موسيقى ورقص وشعر وحرف يدوية.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="infrastructureAchievement">تطوير البنية التحتية</h3>
+                    <p data-translate="infrastructureAchievementDesc">شهد السودان تطوراً ملحوظاً في مجال البنية التحتية، خاصة في مجال الطرق والجسور والسدود. ومن أبرز هذه المشاريع سد مروي الذي يعد من أكبر السدود في أفريقيا، وجسر المك نمر الذي يربط بين الخرطوم وأم درمان، وشبكة الطرق التي تربط بين مختلف أنحاء البلاد. كما شهدت المدن السودانية الكبرى تطوراً عمرانياً ملحوظاً في السنوات الأخيرة.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="educationAchievement">التقدم في مجال التعليم</h3>
+                    <p data-translate="educationAchievementDesc">حقق السودان تقدماً ملحوظاً في مجال التعليم، حيث تم إنشاء العديد من الجامعات والمعاهد العليا في مختلف أنحاء البلاد. وتعتبر جامعة الخرطوم من أعرق الجامعات في أفريقيا والعالم العربي، وقد تخرج منها العديد من العلماء والمفكرين والقادة. كما اهتم السودان بتطوير التعليم الأساسي والثانوي وزيادة معدلات الالتحاق بالمدارس.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places" id="places-sudan">
+        <div class="container">
+            <h2 class="section-title" data-translate="sudanLandmarks">أشهر المعالم في السودان</h2>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/sudan-pyramids.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="meroe">أهرامات البجراوية (مروي)</h3>
+                    <p data-translate="meroeDesc1">تعد أهرامات البجراوية من أشهر المعالم الأثرية في السودان، وتقع بالقرب من نهر النيل على بعد حوالي 200 كم شمال الخرطوم. بنيت هذه الأهرامات في الفترة من القرن الثامن قبل الميلاد إلى القرن الرابع الميلادي، وكانت مقابر لملوك وملكات مملكة كوش (مروي).</p>
+                    <p data-translate="meroeDesc2">تتميز أهرامات البجراوية بشكلها المختلف عن الأهرامات المصرية، حيث إنها أصغر حجماً وأكثر انحداراً. يوجد في الموقع أكثر من 200 هرم، مما يجعلها أكبر مجموعة من الأهرامات في العالم. وقد تم تسجيل الموقع ضمن قائمة التراث العالمي لليونسكو عام 2011.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/sudan-suakin.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="suakin">جزيرة سواكن</h3>
+                    <p data-translate="suakinDesc1">تقع جزيرة سواكن على ساحل البحر الأحمر في شرق السودان، وكانت في الماضي ميناءً تجارياً مهماً ومركزاً للتبادل الثقافي بين أفريقيا والجزيرة العربية. تشتهر الجزيرة بمبانيها التاريخية المبنية من المرجان، والتي تعكس الطراز المعماري العثماني والإسلامي.</p>
+                    <p data-translate="suakinDesc2">على الرغم من أن معظم المباني في سواكن أصبحت الآن في حالة خراب، إلا أنها لا تزال تعكس جمال وروعة العمارة التقليدية في المنطقة. وتعمل الحكومة السودانية حالياً على ترميم وإعادة إحياء الجزيرة لتصبح وجهة سياحية مهمة.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/sudan-dinder.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="dinder">حديقة الدندر الوطنية</h3>
+                    <p data-translate="dinderDesc1">تعد حديقة الدندر الوطنية من أكبر المحميات الطبيعية في السودان وأفريقيا، وتقع في الجزء الجنوبي الشرقي من البلاد على الحدود مع إثيوبيا. تأسست الحديقة عام 1935، وتمتد على مساحة تزيد عن 10,000 كم²، وتضم مجموعة متنوعة من النظم البيئية من غابات وسهول وأراضي رطبة.</p>
+                    <p data-translate="dinderDesc2">تشتهر حديقة الدندر بتنوعها البيولوجي الكبير، حيث تضم العديد من أنواع الحيوانات البرية مثل الأسود والفيلة والزرافات والغزلان والقرود وأكثر من 250 نوعاً من الطيور. وقد تم تصنيفها كمحمية للمحيط الحيوي من قبل اليونسكو عام 1979.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h3 class="section-title" data-translate="sudanVideo">فيديو تعريفي عن السودان</h3>
+            <div class="video-container">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/Moy7Wjm2N1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery" id="gallery-sudan">
+        <div class="container">
+            <h2 class="section-title" data-translate="photoGallery">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-1.jpg" alt="أهرامات البجراوية">
+                    <div class="gallery-caption" data-translate="meroeGallery">أهرامات البجراوية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-2.jpg" alt="نهر النيل">
+                    <div class="gallery-caption" data-translate="nileGallery">نهر النيل في الخرطوم</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-3.jpg" alt="جبل مرة">
+                    <div class="gallery-caption" data-translate="marraGallery">جبل مرة في دارفور</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-4.jpg" alt="سواكن">
+                    <div class="gallery-caption" data-translate="suakinGallery">جزيرة سواكن التاريخية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-5.jpg" alt="الخرطوم">
+                    <div class="gallery-caption" data-translate="khartoumGallery">العاصمة الخرطوم</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-6.jpg" alt="متحف السودان الوطني">
+                    <div class="gallery-caption" data-translate="museumGallery">متحف السودان الوطني</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-7.jpg" alt="بورتسودان">
+                    <div class="gallery-caption" data-translate="portSudanGallery">مدينة بورتسودان</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sudan-gallery-8.jpg" alt="الصحراء السودانية">
+                    <div class="gallery-caption" data-translate="desertGallery">الصحراء السودانية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-translate="arabicArchive">أرشيف الدول العربية</h3>
+                    <p data-translate="aboutDescription">موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                        <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                        <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                        <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                        <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                        <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="contactUs">تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="location">الدوحة، دولة قطر</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <h4 data-translate="sources">مصادر ومراجع</h4>
+                <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="copyright">&copy; 2025 أرشيف الدول العربية. جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</p>
+            <p data-translate="designBy">تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 

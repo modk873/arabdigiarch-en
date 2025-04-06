@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="aboutTitle">عن أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js"></script>
+    <script src="js/ai-translator.js"></script>
+</head>
+<body>
+    <div class="translation-controls">
+        <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span>English</span>
+        </button>
+        <button id="aiToggle" class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1 data-translate="arabicArchive">أرشيف الدول العربية</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html" class="active" data-translate="about">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink" data-translate="signin">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink" data-translate="signup">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;" data-translate="profile">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn" data-translate="logout">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-header">
+        <div class="container">
+            <h1 data-translate="aboutTitle">عن أرشيف الدول العربية</h1>
+            <p data-translate="aboutDescription">موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-text">
+                <h2 data-translate="aboutTitle">عن أرشيف الدول العربية</h2>
+                <p data-translate="aboutContent">أرشيف الدول العربية هو مشروع تعليمي يهدف إلى توثيق وتقديم معلومات شاملة عن الدول العربية. يقدم الموقع معلومات دقيقة ومحدثة عن كل دولة، بما في ذلك:</p>
+                <ul>
+                    <li data-translate="aboutFeatures.0">المعلومات الأساسية عن كل دولة</li>
+                    <li data-translate="aboutFeatures.1">أشهر المعالم السياحية والتاريخية</li>
+                    <li data-translate="aboutFeatures.2">الإنجازات الحضارية والثقافية</li>
+                    <li data-translate="aboutFeatures.3">معارض الصور والفيديوهات التعريفية</li>
+                </ul>
+                <p data-translate="aboutGoals">نهدف من خلال هذا الموقع إلى:</p>
+                <ul>
+                    <li data-translate="aboutGoalsList.0">تعزيز المعرفة بالدول العربية</li>
+                    <li data-translate="aboutGoalsList.1">تسهيل الوصول إلى المعلومات الموثوقة</li>
+                    <li data-translate="aboutGoalsList.2">تقديم محتوى تعليمي مفيد للطلاب والباحثين</li>
+                    <li data-translate="aboutGoalsList.3">تعزيز التواصل الثقافي بين الدول العربية</li>
+                </ul>
+            </div>
+            
+            <div class="team-section">
+                <h2 data-translate="teamTitle">فريق العمل</h2>
+                <p data-translate="teamDescription">يضم فريق عمل أرشيف الدول العربية نخبة من الباحثين والمؤرخين والكتاب والمصممين المتخصصين في مجالات التاريخ والثقافة والتراث العربي.</p>
+                
+                <div class="team-grid">
+                    <div class="team-box">
+                        <h3>محمد 1</h3>
+                        <h3>مدير المحتوى</h3>
+                    </div>
+                    <div class="team-box">
+                        <h3>محمد 2</h3>
+                    </div>
+                    <div class="team-box">
+                        <h3>محمد 3</h3>
+                    </div>
+                    <div class="team-box">
+                        <h3>عبدالرحمن</h3>
+                    </div>
+                    <div class="team-box">
+                        <h3>أنس</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-translate="arabicArchive">أرشيف الدول العربية</h3>
+                    <p data-translate="aboutDescription">موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="contactUs">تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="location">الدوحة، دولة قطر</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-translate="arabicArchive">أرشيف الدول العربية</span>. <span data-translate="copyright">جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</span></p>
+                <p data-translate="designBy">تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4 data-translate="sources">مصادر ومراجع</h4>
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

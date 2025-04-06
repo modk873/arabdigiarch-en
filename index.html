@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="arabicArchive">أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js"></script>
+    <script src="js/ai-translator.js"></script>
+</head>
+<body>
+    <div class="translation-controls">
+        <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span>English</span>
+        </button>
+        <button id="aiToggle" class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1 data-translate="arabicArchive">أرشيف الدول العربية</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink" data-translate="signin">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink" data-translate="signup">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;" data-translate="profile">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn" data-translate="logout">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 data-translate="arabicArchive">أرشيف شامل للدول العربية</h2>
+                <p data-translate="discover">اكتشف تاريخ وإنجازات وأشهر المعالم في قطر والأردن والسودان وفلسطين</p>
+                <div class="hero-buttons">
+                    <a href="#countries" class="btn primary-btn" data-translate="explore">استكشف الدول</a>
+                    <a href="about.html" class="btn secondary-btn" data-translate="aboutArchive">عن الأرشيف</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="countries" class="countries">
+        <div class="container">
+            <h2 class="section-title">الدول العربية في الأرشيف</h2>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="country-image qatar-img"></div>
+                    <h3>قطر</h3>
+                    <p>دولة عربية تقع في شرق شبه الجزيرة العربية، عاصمتها الدوحة، وتشتهر بتطورها الاقتصادي السريع وتنظيمها لكأس العالم 2022.</p>
+                    <a href="qatar.html" class="btn">اكتشف المزيد</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-image jordan-img"></div>
+                    <h3>الأردن</h3>
+                    <p>المملكة الأردنية الهاشمية دولة عربية تقع في قلب الشرق الأوسط، عاصمتها عمان، وتشتهر بمواقعها التاريخية مثل البتراء.</p>
+                    <a href="jordan.html" class="btn">اكتشف المزيد</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-image sudan-img"></div>
+                    <h3>السودان</h3>
+                    <p>جمهورية السودان دولة عربية أفريقية، عاصمتها الخرطوم، وتتميز بتنوعها الثقافي والحضاري وتاريخها العريق.</p>
+                    <a href="sudan.html" class="btn">اكتشف المزيد</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-image palestine-img"></div>
+                    <h3>فلسطين</h3>
+                    <p>دولة عربية تقع في غرب آسيا، عاصمتها القدس، وتضم العديد من المواقع التاريخية والدينية ذات الأهمية العالمية.</p>
+                    <a href="palestine.html" class="btn">اكتشف المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">ما يميز أرشيفنا</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-landmark"></i>
+                    <h3>معالم تاريخية</h3>
+                    <p>استكشف أشهر المعالم التاريخية والسياحية في كل دولة</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-medal"></i>
+                    <h3>إنجازات وطنية</h3>
+                    <p>تعرف على أبرز الإنجازات الوطنية والدولية لكل دولة</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-book-open"></i>
+                    <h3>معلومات شاملة</h3>
+                    <p>معلومات موثقة وشاملة عن تاريخ وثقافة كل دولة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="country-showcase">
+        <div class="container">
+            <h2 class="section-title">صور من الدول العربية</h2>
+            <div class="showcase-grid">
+                <div class="showcase-country">
+                    <h3>قطر</h3>
+                    <div class="showcase-photos">
+                        <div class="showcase-photo">
+                            <img src="images/qatar-gallery-1.jpg" alt="أفق مدينة الدوحة">
+                            <div class="photo-caption">أفق مدينة الدوحة</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/qatar-gallery-2.jpg" alt="متحف الفن الإسلامي">
+                            <div class="photo-caption">متحف الفن الإسلامي</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/qatar-gallery-5.jpg" alt="سوق واقف">
+                            <div class="photo-caption">سوق واقف التقليدي</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/qatar-gallery-8.jpg" alt="جزيرة اللؤلؤة">
+                            <div class="photo-caption">جزيرة اللؤلؤة</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-country">
+                    <h3>الأردن</h3>
+                    <div class="showcase-photos">
+                        <div class="showcase-photo">
+                            <img src="images/jordan-gallery-1.jpg" alt="البتراء">
+                            <div class="photo-caption">مدينة البتراء</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/jordan-gallery-2.jpg" alt="جرش">
+                            <div class="photo-caption">آثار جرش</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/jordan-gallery-5.jpg" alt="وادي رم">
+                            <div class="photo-caption">وادي رم</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/jordan-gallery-7.jpg" alt="العقبة">
+                            <div class="photo-caption">مدينة العقبة</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-country">
+                    <h3>السودان</h3>
+                    <div class="showcase-photos">
+                        <div class="showcase-photo">
+                            <img src="images/sudan-gallery-1.jpg" alt="أهرامات البجراوية">
+                            <div class="photo-caption">أهرامات البجراوية</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/sudan-gallery-2.jpg" alt="نهر النيل">
+                            <div class="photo-caption">نهر النيل</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/sudan-gallery-5.jpg" alt="الخرطوم">
+                            <div class="photo-caption">العاصمة الخرطوم</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/sudan-gallery-7.jpg" alt="بورتسودان">
+                            <div class="photo-caption">مدينة بورتسودان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="showcase-country">
+                    <h3>فلسطين</h3>
+                    <div class="showcase-photos">
+                        <div class="showcase-photo">
+                            <img src="images/palestine-gallery-1.jpg" alt="قبة الصخرة">
+                            <div class="photo-caption">قبة الصخرة</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/palestine-gallery-2.jpg" alt="كنيسة المهد">
+                            <div class="photo-caption">كنيسة المهد</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/palestine-gallery-5.jpg" alt="المسجد الأقصى">
+                            <div class="photo-caption">المسجد الأقصى</div>
+                        </div>
+                        <div class="showcase-photo">
+                            <img src="images/palestine-gallery-6.jpg" alt="مدينة نابلس">
+                            <div class="photo-caption">مدينة نابلس</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-cta">
+                <p>لمشاهدة المزيد من الصور، يرجى زيارة صفحات الدول</p>
+                <div class="showcase-buttons">
+                    <a href="qatar.html" class="btn primary-btn">قطر</a>
+                    <a href="jordan.html" class="btn primary-btn">الأردن</a>
+                    <a href="sudan.html" class="btn primary-btn">السودان</a>
+                    <a href="palestine.html" class="btn primary-btn">فلسطين</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>أرشيف الدول العربية</h3>
+                    <p>موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <h4>مصادر ومراجع</h4>
+
+                        <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                        <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                        <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>تواصل معنا</h3>
+                    <p><i class="fas fa-envelope"></i> info@arabcountriesarchive.com</p>
+                    <p><i class="fas fa-phone"></i> 04042007</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 أرشيف الدول العربية. جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</p>
+                <p>تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

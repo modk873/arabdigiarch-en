@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="jordanTitle">الأردن - أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js"></script>
+    <script src="js/ai-translator.js"></script>
+</head>
+<body>
+    <div class="translation-controls">
+        <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+            <span>English</span>
+        </button>
+        <button id="aiToggle" class="ai-toggle" onclick="toggleAITranslation()">
+            <span data-translate="aiTranslation">الترجمة بالذكاء الاصطناعي</span>
+        </button>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1 data-translate="arabicArchive">أرشيف الدول العربية</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" class="active" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink" data-translate="signin">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink" data-translate="signup">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;" data-translate="profile">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn" data-translate="logout">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="country-header" style="background-image: url('images/jordan-header.jpg');">
+        <div class="country-header-content">
+            <h1 data-translate="jordanTitle">المملكة الأردنية الهاشمية</h1>
+            <p data-translate="jordanDescription">دولة عربية تقع في قلب الشرق الأوسط في غرب آسيا</p>
+        </div>
+    </section>
+
+    <section class="country-info" id="about-jordan">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2 data-translate="aboutJordan">نبذة عن الأردن</h2>
+                    <p data-translate="jordanIntro">المملكة الأردنية الهاشمية هي دولة عربية تقع في قلب الشرق الأوسط في غرب آسيا. عاصمتها عمان، وتحدها سوريا من الشمال، والعراق من الشرق، والسعودية من الجنوب والشرق، وفلسطين من الغرب. تطل الأردن على البحر الأحمر من خلال ميناء العقبة في أقصى الجنوب الغربي.</p>
+                    <p data-translate="jordanHistory">تتميز الأردن بتاريخها العريق وموقعها الاستراتيجي الذي جعلها ملتقى للحضارات المختلفة عبر العصور. وتضم العديد من المواقع الأثرية والتاريخية الهامة مثل مدينة البتراء الوردية التي تعد من عجائب الدنيا السبع الجديدة، وجرش الرومانية، وقلعة عجلون، وغيرها.</p>
+                    <p data-translate="jordanDevelopment">يتميز الأردن بالاستقرار السياسي والأمني في منطقة مضطربة، وقد نجح في تحقيق تنمية اقتصادية واجتماعية ملحوظة رغم محدودية موارده الطبيعية. كما يعتبر الأردن من الدول الرائدة في مجالات التعليم والرعاية الصحية والسياحة في المنطقة العربية.</p>
+                </div>
+                <div class="country-stats">
+                    <h3 data-translate="basicInfo">معلومات أساسية</h3>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong data-translate="capital">العاصمة:</strong> <span data-translate="amman">عمان</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong data-translate="population">عدد السكان:</strong> <span data-translate="jordanPopulation">حوالي 11 مليون نسمة (2023)</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong data-translate="area">المساحة:</strong> <span data-translate="jordanArea">89,342 كم²</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <strong data-translate="officialLanguage">اللغة الرسمية:</strong> <span data-translate="arabic">العربية</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <strong data-translate="currency">العملة:</strong> <span data-translate="jordanCurrency">الدينار الأردني</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong data-translate="nationalDay">اليوم الوطني:</strong> <span data-translate="jordanNationalDay">25 مايو (عيد الاستقلال)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements-jordan">
+        <div class="container">
+            <h2 class="section-title" data-translate="jordanAchievements">أبرز إنجازات الأردن</h2>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="educationAchievement">التطور في قطاع التعليم</h3>
+                    <p data-translate="educationAchievementDesc">حققت الأردن إنجازات كبيرة في مجال التعليم، حيث تعتبر من الدول العربية الرائدة في هذا المجال. وصلت نسبة التعليم في الأردن إلى مستويات عالية، وتمتلك الأردن العديد من الجامعات المرموقة على المستوى الإقليمي. كما تتميز بجودة مخرجات التعليم، حيث يعمل الكثير من الأردنيين في مجالات التدريس والطب والهندسة في مختلف دول العالم.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="tourismAchievement">تطوير قطاع السياحة</h3>
+                    <p data-translate="tourismAchievementDesc">نجحت الأردن في تطوير قطاع السياحة ليصبح من أهم مصادر الدخل القومي، حيث تمتلك العديد من المواقع السياحية والأثرية الفريدة مثل البتراء والبحر الميت وجرش ووادي رم. وقد استثمرت الحكومة الأردنية في تطوير البنية التحتية السياحية وتحسين الخدمات المقدمة للسياح، مما ساهم في زيادة أعداد السياح الوافدين إلى المملكة سنوياً.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="renewableEnergyAchievement">الريادة في مجال الطاقة المتجددة</h3>
+                    <p data-translate="renewableEnergyAchievementDesc">اتخذت الأردن خطوات كبيرة في مجال الطاقة المتجددة للتقليل من اعتمادها على استيراد الطاقة. وقد نجحت في إنشاء العديد من مشاريع الطاقة الشمسية وطاقة الرياح، مثل محطة الشمسية في معان ومشروع طاقة الرياح في الطفيلة. وتهدف الأردن إلى زيادة نسبة الطاقة المتجددة في مزيج الطاقة الكلي إلى 20% بحلول عام 2025.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="refugeesAchievement">الدور الإنساني في استضافة اللاجئين</h3>
+                    <p data-translate="refugeesAchievementDesc">قدمت الأردن نموذجاً عالمياً في استضافة اللاجئين من الدول المجاورة التي تعاني من الصراعات، حيث استقبلت ملايين اللاجئين الفلسطينيين والعراقيين والسوريين على مر السنين. وقد وفرت لهم الخدمات الأساسية من تعليم ورعاية صحية وفرص عمل رغم محدودية مواردها، مما أكسبها احتراماً دولياً كبيراً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places" id="places-jordan">
+        <div class="container">
+            <h2 class="section-title" data-translate="jordanLandmarks">أشهر المعالم في الأردن</h2>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/jordan-petra.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="petra">البتراء</h3>
+                    <p data-translate="petraDesc1">تعد البتراء من أشهر المواقع الأثرية في العالم وأحد عجائب الدنيا السبع الجديدة. تقع في محافظة معان جنوب الأردن، وهي مدينة أثرية نحتت في الصخر الوردي من قبل الأنباط قبل أكثر من 2000 عام. تشتهر البتراء بواجهتها المعروفة باسم "الخزنة" التي تظهر عند نهاية ممر ضيق يسمى "السيق".</p>
+                    <p data-translate="petraDesc2">تضم البتراء العديد من المعالم الأثرية المذهلة مثل المسرح الروماني، والدير، والقصور الملكية، والمعابد، والمقابر المنحوتة في الصخر. وقد تم تصنيفها كموقع للتراث العالمي من قبل اليونسكو عام 1985، وتعتبر الوجهة السياحية الأولى في الأردن.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/jordan-dead-sea.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="deadSea">البحر الميت</h3>
+                    <p data-translate="deadSeaDesc1">يعتبر البحر الميت أخفض نقطة على سطح الأرض، حيث يقع على ارتفاع 430 متراً تحت مستوى سطح البحر. يقع على الحدود بين الأردن وفلسطين، ويتميز بنسبة ملوحة عالية جداً تصل إلى 33.7%، مما يجعل الغوص فيه مستحيلاً ويسمح للإنسان بالطفو على سطحه بسهولة.</p>
+                    <p data-translate="deadSeaDesc2">يشتهر البحر الميت بخصائصه العلاجية، حيث تحتوي مياهه وطينه على معادن وأملاح مفيدة لعلاج العديد من الأمراض الجلدية والروماتيزمية. وقد أصبح وجهة سياحية علاجية عالمية، حيث تنتشر على شواطئه المنتجعات والفنادق الفاخرة التي تقدم العلاجات الطبيعية والاستشفائية.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/jordan-wadi-rum.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="wadiRum">وادي رم</h3>
+                    <p data-translate="wadiRumDesc1">يعرف وادي رم أيضاً باسم "وادي القمر" نظراً لتشابه تضاريسه مع سطح القمر. يقع في جنوب الأردن بالقرب من الحدود مع السعودية، ويتميز بمناظره الطبيعية الخلابة من جبال وصخور حمراء وكثبان رملية وممرات ضيقة.</p>
+                    <p data-translate="wadiRumDesc2">يعتبر وادي رم من أهم الوجهات السياحية في الأردن، حيث يقصده محبو المغامرات لممارسة أنشطة مثل تسلق الصخور، والتخييم في الصحراء، وركوب الجمال، ومشاهدة النجوم ليلاً. كما تم تصوير العديد من الأفلام العالمية فيه مثل "لورنس العرب" و"المريخي". وقد تم تصنيفه كموقع للتراث العالمي من قبل اليونسكو عام 2011.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h3 class="section-title" data-translate="jordanVideo">فيديو تعريفي عن الأردن</h3>
+            <div class="video-container">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/GrIedO5wjlo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery" id="gallery-jordan">
+        <div class="container">
+            <h2 class="section-title" data-translate="photoGallery">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-1.jpg" alt="البتراء">
+                    <div class="gallery-caption" data-translate="petraGallery">مدينة البتراء الوردية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-2.jpg" alt="جرش">
+                    <div class="gallery-caption" data-translate="jerashGallery">آثار جرش الرومانية</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-3.jpg" alt="البحر الميت">
+                    <div class="gallery-caption" data-translate="deadSeaGallery">البحر الميت</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-4.jpg" alt="عمان">
+                    <div class="gallery-caption" data-translate="ammanGallery">العاصمة عمان</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-5.jpg" alt="وادي رم">
+                    <div class="gallery-caption" data-translate="wadiRumGallery">وادي رم</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-6.jpg" alt="قلعة عجلون">
+                    <div class="gallery-caption" data-translate="ajlounGallery">قلعة عجلون</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-7.jpg" alt="العقبة">
+                    <div class="gallery-caption" data-translate="aqabaGallery">مدينة العقبة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/jordan-gallery-8.jpg" alt="أم قيس">
+                    <div class="gallery-caption" data-translate="ummQaisGallery">أم قيس الأثرية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-translate="arabicArchive">أرشيف الدول العربية</h3>
+                    <p data-translate="aboutDescription">موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                        <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                        <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                        <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                        <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                        <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="contactUs">تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="location">الدوحة، دولة قطر</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4 data-translate="sources">مصادر ومراجع</h4>
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-bottom">
+               <p data-translate="copyright">&copy; 2025 أرشيف الدول العربية. جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</p>
+                <p data-translate="designBy">تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="palestineTitle">فلسطين - أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js" defer></script>
+    <script src="js/ai-translator.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1 data-translate="siteTitle">أرشيف الدول العربية</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" class="active" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="translation-controls">
+        <button class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-language"></i>
+            <span data-translate="toggleLang">English</span>
+        </button>
+        <button class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span data-translate="aiTranslation">AI Translation</span>
+        </button>
+    </div>
+
+    <section class="country-header" style="background-image: url('images/palestine-header.jpg');">
+        <div class="container">
+            <div class="country-header-content">
+                <h1 data-translate="palestineTitle">فلسطين</h1>
+                <p data-translate="palestineDescription">موطن الحضارات العريقة وملتقى الأديان</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="country-info" id="about-palestine">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2 data-translate="aboutPalestine">نبذة عن فلسطين</h2>
+                    <p data-translate="palestineIntro">فلسطين هي دولة عربية تقع في قلب الشرق الأوسط، وتتميز بتاريخها العريق وتراثها الثقافي الغني. تعد موطناً للعديد من المواقع الدينية والتاريخية المهمة.</p>
+                    <p data-translate="palestineGeography">تتميز فلسطين بتنوع جغرافي يشمل الساحل الفلسطيني وسلسلة جبال الخليل والقدس، وتضم العديد من الأودية والسهول الخصبة.</p>
+                    <p>على الرغم من الظروف السياسية الصعبة التي تمر بها، إلا أن فلسطين استطاعت تحقيق العديد من الإنجازات في مختلف المجالات، وخاصة في مجالات التعليم والثقافة والفنون. كما تتميز بتراثها الثقافي الغني الذي يتجلى في الموسيقى والرقص والأزياء التقليدية والحرف اليدوية والمأكولات الشعبية.</p>
+                </div>
+                <div class="country-stats">
+                    <h3 data-translate="capital">العاصمة</h3>
+                    <div class="stat-item">
+                        <i class="fas fa-city"></i>
+                        <div>
+                            <p data-translate="jerusalem">القدس</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3 data-translate="population">عدد السكان</h3>
+                            <p data-translate="palestinePopulation">حوالي 5.3 مليون نسمة</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <div>
+                            <h3 data-translate="area">المساحة</h3>
+                            <p data-translate="palestineArea">6,220 كم²</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h3 data-translate="language">اللغة الرسمية</h3>
+                            <p data-translate="arabic">العربية</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-coins"></i>
+                        <div>
+                            <h3 data-translate="currency">العملة</h3>
+                            <p data-translate="palestineCurrency">الشيكل، الدينار الأردني</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-flag"></i>
+                        <div>
+                            <h3 data-translate="nationalDay">اليوم الوطني</h3>
+                            <p data-translate="palestineNationalDay">15 نوفمبر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements-palestine">
+        <div class="container">
+            <h2 class="section-title" data-translate="palestineAchievements">أبرز إنجازات فلسطين</h2>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="education">التعليم</h3>
+                    <p data-translate="palestineEducation">تطور نظام تعليمي متقدم رغم التحديات، مع معدلات عالية من محو الأمية وتطور في التعليم العالي.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="culturalHeritage">التراث الثقافي</h3>
+                    <p data-translate="palestineHeritage">حفاظ قوي على التراث الثقافي الفلسطيني من خلال الفنون الشعبية والموسيقى والأدب.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="sports">الرياضة</h3>
+                    <p data-translate="palestineSports">تطور الرياضة الفلسطينية وإنجازات في مختلف المجالات الرياضية.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="arts">الفنون</h3>
+                    <p data-translate="palestineArts">نهضة في الفنون البصرية والأدبية والموسيقية تعبر عن الهوية الفلسطينية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places" id="places-palestine">
+        <div class="container">
+            <h2 class="section-title" data-translate="notablePlaces">أبرز المعالم</h2>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/al-aqsa.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="alAqsa">المسجد الأقصى</h3>
+                    <p data-translate="alAqsaDesc">أولى القبلتين وثالث الحرمين الشريفين، يضم قبة الصخرة والمسجد الأقصى وعدة معالم إسلامية تاريخية.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/bethlehem.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="bethlehem">كنيسة المهد</h3>
+                    <p data-translate="bethlehemDesc">أقدم كنيسة في العالم، بنيت فوق المكان الذي يعتقد أن المسيح ولد فيه.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/nablus.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="nablus">بلدة نابلس القديمة</h3>
+                    <p data-translate="nablusDesc">تضم أزقة تاريخية وحمامات عثمانية وأسواق تقليدية تعكس التراث الفلسطيني الأصيل.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h3 class="section-title" data-translate="watchVideo">شاهد الفيديو</h3>
+            <div class="video-container">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/icueyozDkdc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+            </div>
+    
+        </div>
+    
+    </body>
+    </html>
+    
+    <section class="photo-gallery" id="gallery-palestine">
+        <div class="container">
+            <h2 class="section-title" data-translate="photoGallery">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-1.jpg" alt="قبة الصخرة">
+                    <div class="gallery-caption">قبة الصخرة في القدس</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-2.jpg" alt="كنيسة المهد">
+                    <div class="gallery-caption">كنيسة المهد في بيت لحم</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-3.jpg" alt="البلدة القديمة في القدس">
+                    <div class="gallery-caption">البلدة القديمة في القدس</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-4.jpg" alt="شاطئ غزة">
+                    <div class="gallery-caption">شاطئ غزة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-5.jpg" alt="المسجد الأقصى">
+                    <div class="gallery-caption">المسجد الأقصى</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-6.jpg" alt="مدينة نابلس">
+                    <div class="gallery-caption">مدينة نابلس</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-7.jpg" alt="مدينة الخليل">
+                    <div class="gallery-caption">مدينة الخليل</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/palestine-gallery-8.jpg" alt="بحيرة طبريا">
+                    <div class="gallery-caption">بحيرة طبريا</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-translate="siteTitle">أرشيف الدول العربية</h3>
+                    <p data-translate="footerDesc">مصدر شامل للمعلومات عن الدول العربية</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="quickLinks">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                        <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                        <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                        <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                        <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                        <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="contactUs">اتصل بنا</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@arabdigiarch.com</li>
+                        <li><i class="fas fa-phone"></i> +1234567890</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4 data-translate="sources">مصادر ومراجع</h4>
+
+                    <li><a href="https://www.iloveqatar.net/">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home">sudanarchive</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-bottom">
+             <p data-translate="copyright">&copy; 2025 أرشيف الدول العربية. جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</p>
+                <p data-translate="design">تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+</body>
+</html> 

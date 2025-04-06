@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="qatarTitle">قطر - أرشيف الدول العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/translations.js"></script>
+    <script src="js/ai-translator.js"></script>
+</head>
+<body>
+    <div class="translation-controls">
+        <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span>English</span>
+        </button>
+        <button id="aiToggle" class="ai-toggle" onclick="toggleAITranslation()">
+            <i class="fas fa-robot"></i>
+            <span>AI Translation</span>
+        </button>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1 data-translate="arabicArchive">أرشيف الدول العربية</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                    <li><a href="qatar.html" class="active" data-translate="qatar">قطر</a></li>
+                    <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                    <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                    <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                    <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    <li><a href="signin.html" id="authLink" data-translate="signin">تسجيل الدخول</a></li>
+                    <li><a href="signup.html" id="signupLink" data-translate="signup">إنشاء حساب</a></li>
+                    <li><a href="profile.html" id="profileLink" style="display: none;" data-translate="profile">الملف الشخصي</a></li>
+                    <li><a href="#" id="logoutLink" style="display: none;" class="logout-btn" data-translate="logout">تسجيل الخروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="country-header" style="background-image: url('images/qatar-header.jpg');">
+        <div class="country-header-content">
+            <h1 data-translate="qatar">قطر</h1>
+            <p data-translate="qatarDescription">دولة عربية تقع في شرق شبه الجزيرة العربية في جنوب غرب آسيا</p>
+        </div>
+    </section>
+
+    <section class="country-info" id="about-qatar">
+        <div class="container">
+            <div class="country-info-grid">
+                <div class="country-description">
+                    <h2 data-translate="aboutQatar">نبذة عن قطر</h2>
+                    <p data-translate="qatarIntro">قطر هي دولة عربية تقع في شرق شبه الجزيرة العربية في جنوب غرب آسيا. عاصمتها الدوحة التي تعتبر أكبر مدنها وتضم أغلب سكان البلاد. تشترك قطر بحدود برية من الجنوب مع المملكة العربية السعودية وباقي الحدود عبارة عن سواحل على الخليج العربي.</p>
+                    <p data-translate="qatarEconomy">تعتبر قطر من الدول الرائدة في مجال صناعة النفط والغاز الطبيعي، حيث تمتلك ثالث أكبر احتياطي للغاز الطبيعي في العالم. وقد ساهم هذا في تحقيق نمو اقتصادي كبير للبلاد وتطور ملحوظ في البنية التحتية والخدمات.</p>
+                    <p data-translate="qatarCulture">تتميز قطر بمزيج فريد من الثقافة العربية الأصيلة والحداثة، حيث تحافظ على تراثها وتقاليدها مع انفتاحها على العالم وتبنيها للتكنولوجيا والتطور. وقد نجحت قطر في تحقيق مكانة مرموقة على الساحة الدولية من خلال استضافتها للعديد من الفعاليات العالمية وأبرزها كأس العالم لكرة القدم 2022.</p>
+                </div>
+                <div class="country-stats">
+                    <h3 data-translate="basicInfo">معلومات أساسية</h3>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong data-translate="capital">العاصمة:</strong> <span data-translate="doha">الدوحة</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong data-translate="population">عدد السكان:</strong> <span data-translate="qatarPopulation">حوالي 2.9 مليون نسمة (2023)</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong data-translate="area">المساحة:</strong> <span data-translate="qatarArea">11,586 كم²</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <strong data-translate="officialLanguage">اللغة الرسمية:</strong> <span data-translate="arabic">العربية</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <div>
+                            <strong data-translate="currency">العملة:</strong> <span data-translate="qatarCurrency">الريال القطري</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <strong data-translate="nationalDay">اليوم الوطني:</strong> <span data-translate="qatarNationalDay">18 ديسمبر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements-qatar">
+        <div class="container">
+            <h2 class="section-title" data-translate="qatarAchievements">أبرز إنجازات قطر</h2>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="worldCup2022">استضافة كأس العالم 2022</h3>
+                    <p data-translate="worldCup2022Desc">نجحت قطر في استضافة بطولة كأس العالم لكرة القدم 2022، لتصبح أول دولة عربية وشرق أوسطية تستضيف هذا الحدث العالمي. وقد شهدت البطولة نجاحاً كبيراً على المستوى التنظيمي والجماهيري، حيث تم بناء 8 ملاعب عالمية بتصاميم مبتكرة ومستدامة، وتطوير بنية تحتية متكاملة من طرق ومترو وفنادق ومرافق سياحية.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="lngIndustry">تطوير صناعة الغاز الطبيعي المسال</h3>
+                    <p data-translate="lngIndustryDesc">أصبحت قطر من أكبر مصدري الغاز الطبيعي المسال في العالم، حيث تمتلك أكبر حقل غاز طبيعي غير مصاحب في العالم وهو حقل الشمال. وقد نجحت في تطوير صناعة متكاملة للغاز الطبيعي المسال وبناء أسطول ضخم من ناقلات الغاز، مما ساهم في تحقيق طفرة اقتصادية كبيرة للبلاد وتنويع مصادر الدخل.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="alJazeera">إنشاء قناة الجزيرة الإعلامية</h3>
+                    <p data-translate="alJazeeraDesc">أسست قطر قناة الجزيرة الإخبارية عام 1996، والتي أصبحت من أهم القنوات الإخبارية في العالم العربي والعالم. وقد ساهمت القناة في تغيير المشهد الإعلامي العربي من خلال تقديم تغطية إخبارية متميزة وفتح المجال للرأي والرأي الآخر، مما عزز من مكانة قطر على الساحة الإعلامية الدولية.</p>
+                </div>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-content">
+                    <h3 data-translate="education">تطوير قطاع التعليم والبحث العلمي</h3>
+                    <p data-translate="educationDesc">استثمرت قطر بشكل كبير في قطاع التعليم والبحث العلمي، حيث أنشأت مؤسسة قطر للتربية والعلوم وتنمية المجتمع، والتي تضم المدينة التعليمية التي استقطبت فروعاً لجامعات عالمية مرموقة. كما أنشأت واحة قطر للعلوم والتكنولوجيا لدعم البحث العلمي والابتكار، وصندوق قطر للبحث العلمي لتمويل المشاريع البحثية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="places" id="places-qatar">
+        <div class="container">
+            <h2 class="section-title" data-translate="qatarLandmarks">أشهر المعالم في قطر</h2>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/qatar-museum.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="nationalMuseum">متحف قطر الوطني</h3>
+                    <p data-translate="nationalMuseumDesc1">يعد متحف قطر الوطني من أبرز المعالم الثقافية في الدوحة، وقد تم تصميمه على شكل وردة الصحراء بواسطة المهندس المعماري العالمي جان نوفيل. يروي المتحف قصة قطر منذ نشأتها وحتى العصر الحديث من خلال معروضات تفاعلية ومقتنيات تاريخية نادرة.</p>
+                    <p data-translate="nationalMuseumDesc2">يمتد المتحف على مساحة 40,000 متر مربع ويضم 11 قاعة عرض تتناول مختلف جوانب تاريخ قطر وثقافتها وتراثها الطبيعي. كما يضم المتحف حديقة مستوحاة من البيئة القطرية ومسرحاً ومكتبة بحثية ومطاعم ومتاجر للهدايا التذكارية.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/qatar-souq.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="souqWaqif">سوق واقف</h3>
+                    <p data-translate="souqWaqifDesc1">يعتبر سوق واقف من أقدم وأشهر الأسواق التقليدية في قطر، ويقع في قلب الدوحة. تم ترميم السوق والحفاظ على طابعه التراثي ليعكس الهندسة المعمارية القطرية التقليدية. يضم السوق العديد من المحلات التجارية التي تبيع المنتجات التقليدية والحرف اليدوية والتوابل والعطور والملابس والمجوهرات.</p>
+                    <p data-translate="souqWaqifDesc2">يعد سوق واقف وجهة سياحية مهمة في قطر، حيث يمكن للزوار الاستمتاع بتجربة تسوق فريدة والتعرف على التراث القطري الأصيل. كما يضم السوق العديد من المطاعم والمقاهي التي تقدم المأكولات العربية والعالمية.</p>
+                </div>
+            </div>
+            
+            <div class="place-card">
+                <div class="place-image" style="background-image: url('images/qatar-pearl.jpg');"></div>
+                <div class="place-content">
+                    <h3 data-translate="pearlQatar">اللؤلؤة - قطر</h3>
+                    <p data-translate="pearlQatarDesc1">اللؤلؤة - قطر هي جزيرة اصطناعية فاخرة تقع في شمال الدوحة، وتمتد على مساحة 4 ملايين متر مربع. تم تصميم الجزيرة على شكل لؤلؤة، وهي مستوحاة من تاريخ قطر في صيد اللؤلؤ. تضم الجزيرة مجموعة من المناطق السكنية الفاخرة والفنادق والمطاعم والمتاجر العالمية.</p>
+                    <p data-translate="pearlQatarDesc2">تعتبر اللؤلؤة - قطر من أرقى المناطق السياحية في الدوحة، حيث تضم مرسى لليخوت يتسع لأكثر من 800 يخت، وشواطئ رملية، وممشى بحري يمتد على طول الواجهة البحرية. كما تضم العديد من المطاعم العالمية والمقاهي ومراكز التسوق الفاخرة.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h3 class="section-title" data-translate="qatarVideo">فيديو تعريفي عن قطر</h3>
+            <div class="video-container">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/VA05WqWt3lE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery" id="gallery-qatar">
+        <div class="container">
+            <h2 class="section-title" data-translate="photoGallery">معرض الصور</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-1.jpg" alt="منظر للدوحة">
+                    <div class="gallery-caption" data-translate="dohaSkyline">أفق مدينة الدوحة الحديث</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-2.jpg" alt="متحف الفن الإسلامي">
+                    <div class="gallery-caption" data-translate="islamicArtMuseum">متحف الفن الإسلامي</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-3.jpg" alt="كتارا الثقافي">
+                    <div class="gallery-caption" data-translate="katara">الحي الثقافي كتارا</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-4.jpg" alt="استاد البيت">
+                    <div class="gallery-caption" data-translate="alBaytStadium">استاد البيت - كأس العالم 2022</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-5.jpg" alt="سوق واقف">
+                    <div class="gallery-caption" data-translate="souqWaqifGallery">سوق واقف التقليدي</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-6.jpg" alt="متحف قطر الوطني">
+                    <div class="gallery-caption" data-translate="nationalMuseumGallery">متحف قطر الوطني</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-7.jpg" alt="الكورنيش">
+                    <div class="gallery-caption" data-translate="dohaCorniche">كورنيش الدوحة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/qatar-gallery-8.jpg" alt="جزيرة اللؤلؤة">
+                    <div class="gallery-caption" data-translate="pearlIsland">جزيرة اللؤلؤة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-translate="arabicArchive">أرشيف الدول العربية</h3>
+                    <p data-translate="aboutDescription">موقع شامل يوثق تاريخ وإنجازات ومعالم الدول العربية</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-translate="sources">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">الرئيسية</a></li>
+                        <li><a href="qatar.html" data-translate="qatar">قطر</a></li>
+                        <li><a href="jordan.html" data-translate="jordan">الأردن</a></li>
+                        <li><a href="sudan.html" data-translate="sudan">السودان</a></li>
+                        <li><a href="palestine.html" data-translate="palestine">فلسطين</a></li>
+                        <li><a href="about.html" data-translate="about">عن الموقع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-translate="contactUs">تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-translate="location">الدوحة، دولة قطر</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <h4 data-translate="references">مصادر ومراجع</h4>
+                    <li><a href="https://www.iloveqatar.net/" data-translate="iloveqatar">iloveqatar</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Jordan" data-translate="wikipediaJordan">wikipediaJordan</a></li>
+                    <li><a href="https://iloveegypt.com/" data-translate="iloveEgypt">iloveEgypt</a></li>
+                    <li><a href="https://sudanarchive.net/?a=p&p=home" data-translate="sudanarchive">sudanarchive</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-translate="arabicArchive">أرشيف الدول العربية</span>. <span data-translate="copyright">جميع الحقوق محفوظة لمحمد ومحمد العمري والهاجري والجلهم وأنس.</span></p>
+                <p data-translate="designBy">تصميم وتطوير: محمد ومحمد العمري والهاجري والجلهم وأنس</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html> 
